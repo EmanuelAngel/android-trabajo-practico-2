@@ -2,14 +2,9 @@ package com.example.trabajoprctico2.ui.book;
 
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.trabajoprctico2.R;
 import com.example.trabajoprctico2.databinding.ActivityBookBinding;
 
 public class BookActivity extends AppCompatActivity {
@@ -33,6 +28,8 @@ public class BookActivity extends AppCompatActivity {
                     activityBookBinding.tvBookPagesQuantity.setText(String.valueOf(book.getPagesQuantity()));
                     activityBookBinding.tvBookPublishYear.setText(String.valueOf(book.getPublishYear()));
                     activityBookBinding.tvBookDescription.setText(book.getDescription());
+                    activityBookBinding.ivBookImage.setImageResource(book.getImageResId());
+                    activityBookBinding.ivBookImage.setContentDescription("Portada de " + book.getTitle());
                 }
         );
 

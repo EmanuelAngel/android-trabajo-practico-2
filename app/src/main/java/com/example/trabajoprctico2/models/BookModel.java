@@ -2,22 +2,23 @@ package com.example.trabajoprctico2.models;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class BookModel implements Serializable {
-    private String title;
-    private String author;
-    private int pagesQuantity;
-    private int publishYear;
-    private ArrayList<String> genres;
-    private String description;
+    private final String title;
+    private final String author;
+    private final int pagesQuantity;
+    private final int publishYear;
+    private final ArrayList<String> genres;
+    private final String description;
+    private final int imageResId;
     public BookModel(
             String title,
             String author,
             int pagesQuantity,
             int publishYear,
             ArrayList<String> genres,
-            String description
+            String description,
+            int imageResId
     ) {
         this.title = title;
         this.author = author;
@@ -25,6 +26,7 @@ public class BookModel implements Serializable {
         this.publishYear = publishYear;
         this.genres = genres;
         this.description = description;
+        this.imageResId = imageResId;
     }
 
     public String getTitle() {
@@ -49,5 +51,9 @@ public class BookModel implements Serializable {
 
     public String getDescription() {
         return description;
+    }
+
+    public int getImageResId() {
+        return imageResId;
     }
 }
